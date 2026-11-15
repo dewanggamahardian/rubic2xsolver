@@ -3,6 +3,7 @@
 ## Fitur
 
 - Input warna manual untuk 6 sisi. Orientasi fisik bebas; skema warna dideteksi dari 24 sticker.
+- Auto-orientasi mencoba semua rotasi urutan 4 sticker per sisi. Tidak memperbaiki warna yang salah atau sisi yang tertukar.
 - Preview 3D langsung setelah sticker diisi. Kubus bisa ditarik atau diputar dengan tombol panah; tombol Reset mengembalikan sudut pandang.
 - Tombol ⟳ pada tiap kartu memutar urutan baca 90°.
 - Validasi input: jumlah warna, sudut warna ganda, dan konsistensi 8 sudut.
