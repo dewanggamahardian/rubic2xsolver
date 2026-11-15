@@ -33,14 +33,26 @@ npm run dev
 
 File `start-app.bat` menjalankan `npm run dev -- --open`. Tidak perlu mengetik perintah di PowerShell.
 
-## Build (belum untuk solver produksi)
+## Build dan deploy statis
 
 ```bash
 npm run build
 ```
 
-`npm run build` selesai dan menghasilkan `dist`, tetapi solver worker cubing.js belum berjalan di build statis. Jangan deploy `dist` untuk solver sampai worker entry diperbaiki. Untuk pemakaian lokal, gunakan `npm run dev` atau `start-app.bat`.
+Folder `dist` siap diunggah ke Cloudflare Pages, Netlify, Vercel, atau GitHub Pages.
+
+Cloudflare Pages:
+
+1. Workers & Pages, lalu **Create**.
+2. Pilih **Pages**, bukan Workers.
+3. Connect repo GitHub.
+4. Framework preset: **Vite**.
+5. Build command: `npm run build`.
+6. Build output directory: `dist`.
+7. Deploy.
+
+Jangan isi deploy command `npx wrangler deploy`. Itu jalur Workers dan memicu error auto-setup Vite. Pages hanya butuh build command dan output directory.
 
 ## Catatan
 
-Import cubing.js memakai dependency npm agar dev server memproses worker. Build statis masih memiliki batasan worker. Jalankan uji solve pada beberapa scramble legal sebelum memakai solver di lingkungan lain.
+Worker solver sekarang dibundel lewat Vite `?worker` dan diuji di `vite preview`. Build statis bisa menyelesaikan kubus, termasuk skema warna non-standar.
