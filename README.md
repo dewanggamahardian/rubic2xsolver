@@ -9,7 +9,7 @@
 - Tombol ⟳ pada tiap kartu memutar urutan baca 90°.
 - Validasi input: jumlah warna, sudut warna ganda, dan konsistensi 8 sudut.
 - Pesan kesalahan menjelaskan kenapa susunan tidak konsisten.
-- Panduan solusi berupa kubus 3D. Kubus mulai dari state input; klik Putar lagi untuk animasi gerakan aktif, Lanjut untuk pindah langkah.
+- Panduan solusi berupa kubus 3D. Kubus mulai dari state input; Putar lagi untuk animasi gerakan aktif, Putar semua untuk animasi seluruh solusi, Lanjut untuk pindah langkah.
 - Hint kecil menjelaskan tujuan setiap putaran.
 
 ## Menjalankan lokal (Windows)
